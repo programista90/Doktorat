@@ -4,6 +4,18 @@
 #include <iostream>
 #include "Timer.h"
 
+long int power(long int a, long int j, long int c)
+{
+	int f, i;
+	f = 1;
+	for (i = 1; i <= j; i++)
+	{
+		f = (f*a) % c;
+	}
+	f = f % c;
+	return f;
+}
+
 long int ext_eucledian(long int m, long int b)
 {
 	int a1 = 1, a2 = 0, a3 = m, b1 = 0, b2 = 1, b3 = b, q, t1, t2, t3;
@@ -30,20 +42,6 @@ long int ext_eucledian(long int m, long int b)
 		b2 = t2;
 		b3 = t3;
 	}
-}
-
-
-
-long int power(long int a, long int j, long int c)
-{
-	int f, i;
-	f = 1;
-	for (i = 1; i <= j; i++)
-	{
-		f = (f*a) % c;
-	}
-	f = f % c;
-	return f;
 }
 
 
